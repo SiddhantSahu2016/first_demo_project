@@ -65,6 +65,10 @@
 					<release>${java.version}</release>
 				</configuration>
 			</plugin>
+			<!-- The spring-boot-maven-plugin is what packages your app as an executable
+			"fat JAR" with all dependencies and the proper MANIFEST.MF. Without it, Maven just builds a plain
+			thin JAR — which is why it works in the IDE (Eclipse runs the class directly)
+			but fails from the command line.-->
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
